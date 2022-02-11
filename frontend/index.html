@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ShareMeFile - Best File Sharing App</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brandIcon">
+        <h2 class="brand-name">ShareMeFile</h2>
+        <img src="./images/brand_icon.png" alt="BrandIcon" />
+      </div>
+      <div id="theme" class="">🌞</div>
+    </nav>
+    <main class="main-container">
+      <section class="upload-container">
+        <div class="drop-zone">
+          <div class="icon-container">
+            <img
+              src="./images/file_upload_icon.png"
+              alt="File Icon"
+              draggable="false"
+              class="left"
+            />
+            <img
+              src="./images/file_upload_icon.png"
+              alt="File Icon"
+              draggable="false"
+              class="center"
+            />
+            <img
+              src="./images/file_upload_icon.png"
+              alt="File Icon"
+              draggable="false"
+              class="right"
+            />
+          </div>
+          <input type="file" name="" id="browseFile" />
+          <div class="browseTitle">
+            Drop your files here or, <span class="browseBtn">Browse</span>
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="bg-progress"></div>
+          <div class="inner-container">
+            <div class="title">Uploading...</div>
+            <div class="percent-container"><span id="percent">0</span>%</div>
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="sharing-container">
+          <p class="expire">Link expires in 24 hrs</p>
+          <div class="input-container">
+            <input type="text" id="fileURL" value="prince" readonly />
+            <svg
+              class="w-18 h-18 copyBtn"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </div>
+          <p class="option">Or Send Via Email</p>
+          <div class="email-container">
+            <form method="POST" action="/send" id="emailForm">
+              <div class="field">
+                <label for="sender">Your email</label>
+                <input type="email" required name="from-email" id="sender" />
+              </div>
+              <div class="field">
+                <label for="receiver">Receiver's email</label>
+                <input type="email" required name="to-email" id="receiver" />
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="upload-vector"></div>
+    </main>
+    <!-- toast -->
+    <div class="toast">Done</div>
+    <!-- footer -->
+    <footer class="developer-name">
+      <a href="https://www.instagram.com/phoenix_81_/" target="_blank"
+        >Design and Developed by Phoenix</a
+      >
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

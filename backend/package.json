@@ -1,0 +1,24 @@
+{
+  "name": "file-sharing-app",
+  "version": "1.0.0",
+  "description": "This is file sharing app which is useful for send the file and receiving the file using the app through email as well",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "Pruthvi Tirmal",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.1.5",
+    "multer": "^1.4.4",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.7.2",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^8.3.2"
+  }
+}

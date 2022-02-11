@@ -1,0 +1,12 @@
+#node_module
+node_modules
+
+#env_files
+.env
+
+#uploads_file
+uploads/*
+
+#for empty upload file
+!uploads/.gitkeep
+

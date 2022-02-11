@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Download | ShareMeFile - Best File Sharing App </title>
+  </head>
+  <body>
+    {{! nav bar }}
+    <nav class="navbar">
+      <div class="brandIcon">
+        <h2 class="brand-name">ShareMeFile</h2>
+        <img src="/image/brand_icon.png" alt="BrandIcon" />
+      </div>
+      <div id="theme" class="theme">🌞</div>
+    </nav>
+    <main>
+
+      <section class="download">
+        <img
+          class="download__icon"
+          alt="download icon"
+          src="/image/download__icon.png"
+        />
+        {{#if error}}
+          <h4>{{error}}</h4>
+        {{else}}
+          <h2>Your file is ready to download</h2>
+          <p>Link expires in 24 hours</p>
+          <div class="download__meta">
+            <h4>{{fileName}}</h4>
+            <small>{{fileSize}} KB</small>
+          </div>
+          <div class="send-btn-container">
+            <a href={{downloadLink}}>Download file</a>
+          </div>
+        {{/if}}
+      </section>
+      <footer class="developer-name">
+        <a href="https://www.instagram.com/phoenix_81_/" target="_blank">Design
+          and Developed by Phoenix</a>
+      </footer>
+      <script src="/js/main.js"></script>
+    </main>
+  </body>
+</html>

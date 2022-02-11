@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+:root {
+  --main-bg-color: #eff5fe;
+  --secondary-color: #2196f3;
+  --secondary-dark-color: #03a9f4;
+  --primary-text-color: #000;
+  --focus--bg: #f5fcff;
+}
+body.dark {
+  --main-bg-color: #2c2b2b;
+  --primary-text-color: #fff;
+  --focus--bg: #373839;
+}
+body {
+  font-family: system-ui;
+  background-color: var(--main-bg-color);
+  height: 98vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--primary-text-color);
+  transition: background-color 0.01s ease-in-out;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 30px;
+}
+.navbar .brandIcon {
+  display: flex;
+  align-items: center;
+}
+.navbar .brand-name {
+  margin-left: 25px;
+  color: var(--secondary-color);
+}
+.navbar img {
+  height: 50px;
+  margin-left: 5px;
+}
+.navbar #theme {
+  background-color: var(--focus--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 25px;
+  font-size: larger;
+  border: 2px dashed var(--secondary-color);
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+section.download {
+  background-color: var(--focus--bg);
+  max-width: 90%;
+  width: 430px;
+  border-radius: 25px;
+  box-shadow: 0 20px 20px 0 #00000017;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.download__meta h4 {
+  margin: 5px 0 10px 0;
+}
+
+.download .download__icon {
+  height: 8rem;
+}
+
+.download__meta h4 {
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.send-btn-container a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 40px;
+  margin-top: 15px;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.send-btn-container a:hover {
+  background-color: var(--secondary-dark-color);
+}
+
+.developer-name {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+.developer-name a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "Qwitcher Grypen", cursive;
+  color: var(--secondary-color);
+}
+.developer-name a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 435px) {
+  section.download {
+    width: 90%;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  section p {
+    margin-bottom: 10px;
+  }
+}
